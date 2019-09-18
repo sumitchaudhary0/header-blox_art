@@ -1,0 +1,20 @@
+  *{
+      margin: 0;
+      padding: 0;
+
+  }
+.container
+{
+    max-width: 95%;
+    margin: 0 auto;
+}
+ul li 
+{
+    list-style: none   ;
+    color: white;
+}
+
+ul li a{
+    text-decoration: none;  
+    color: white;
+}

@@ -1,0 +1,21 @@
+.navitems
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.navitems li
+{
+    flex-basis: 18%;
+
+}
+.navitems li a{
+    font-size: 20px;
+    padding: 18px 25px;
+}
+.navitems li a:hover{
+    background: white;
+  
+    color: #0066a2;
+}
+
+

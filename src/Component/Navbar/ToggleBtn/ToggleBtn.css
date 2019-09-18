@@ -1,0 +1,12 @@
+.toggle-btn
+{
+    background: no-repeat;
+    border: none;
+}
+.toggle-btn span
+{
+    background: white;
+    padding: 1px 12px;
+    display: block;
+    margin: 3px 0
+}
