@@ -4,11 +4,21 @@
 }
 
 .search {
-    width: 70%;
-    border-radius: 7px;
+    width: 71%;
+   
     border: none;
-    padding: 6px 0;
+    padding: 6px 7px;
     outline: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .sr-wrapper {
+        display: none;
+    }
+    
+}
+.serachInputContainer input {
+    
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

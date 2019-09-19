@@ -1,0 +1,75 @@
+.searchbox
+{
+background: #fff;
+position: absolute;
+z-index: 99;
+width: 22%;
+margin: 0 auto;
+left: 442px;
+top: 40px;
+height: 200px;
+overflow-y: scroll;
+
+}
+
+.searchbox ul a{
+  text-decoration: none;
+}
+
+.searchbox ul li
+{
+      padding: 5px;
+    
+}
+.searchbox ul li:hover ,.searchbox ul li:hover >span
+{
+     background: #0066a2;
+     color: white;
+    
+   
+    
+}
+.box-img
+{
+ 
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+
+}
+.box-txt
+{
+  font-size: 20px;
+  padding-left: 10px;
+  color: black;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    .searchbox
+    {
+   
+    width: 21%;
+        
+    left: 388px;
+    
+    
+    
+  }
+
+}
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .searchbox{
+    
+   
+    width: 96%;
+    margin: 0 auto;
+    left: 7px;
+    top: 84px;
+   
+    
+    }
+    
+}
