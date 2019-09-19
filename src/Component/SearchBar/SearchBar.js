@@ -14,7 +14,7 @@ export default class SearchBar extends Component {
         return (
             <React.Fragment>
                 <div className="sr-wrapper">
-                    <input type="text" onChange={this.props.change} className="search" name="search" placeholder="Search" />
+                    <input type="text" onChange={this.props.change}  className="search" name="search" placeholder="Search" />
                     <i class="fa fa-search errspan " onClick={this.props.click} aria-hidden="true"></i>
                 </div>
             </React.Fragment>

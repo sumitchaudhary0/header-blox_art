@@ -8,21 +8,22 @@ export default class App extends Component {
   state = {
     showMenu: false,
     searchBox: false,
-    filterdata: [],
-    inputValue: '',
+    matchesbox:'',
+  
+
 
     objects: [
-      { imgUrl: 'logo-makepop.png', value: 'AMERICA' },
-      { imgUrl: 'logo-makepop.png', value: 'JAPAN' },
-      { imgUrl: 'logo-makepop.png', value: 'b' },
-      { imgUrl: 'logo-makepop.png', value: 'ah' },
-      { imgUrl: 'logo-makepop.png', value: 'c' },
-      { imgUrl: 'logo-makepop.png', value: 'd' },
-      { imgUrl: 'logo-makepop.png', value: 'd' },
-      { imgUrl: 'logo-makepop.png', value: 'd' },
-      { imgUrl: 'logo-makepop.png', value: 'e' },
-      { imgUrl: 'logo-makepop.png', value: 'e' },
-      { imgUrl: 'logo-makepop.png', value: 'e' },
+      { imgUrl: 'logo-makepop.png', valu: 'AMERICA' },
+      { imgUrl: 'logo-makepop.png', valu: 'JAPAN' },
+      { imgUrl: 'logo-makepop.png', valu: 'AFRICA' },
+      { imgUrl: 'logo-makepop.png', valu: 'CANADA' },
+      { imgUrl: 'logo-makepop.png', valu: 'CHINA' },
+      { imgUrl: 'logo-makepop.png', valu: 'TURKEY' },
+      { imgUrl: 'logo-makepop.png', valu: 'SINGAPORE' },
+      { imgUrl: 'logo-makepop.png', valu: 'SRILANKA' },
+      { imgUrl: 'logo-makepop.png', valu: 'WEST INDIES' },
+      { imgUrl: 'logo-makepop.png', valu: 'VIETNAM' },
+      { imgUrl: 'logo-makepop.png', valu: 'PHILLEPINES' },
     ],
 
   }
@@ -30,16 +31,33 @@ export default class App extends Component {
 
 
   changeHandler = (value) => {
-    const query = value;
-    const filteredData = this.state.objects.filter(element => {
-      return element.value.toLowerCase().includes(query.toLowerCase());
-    });
-    console.log(filteredData, 'fgjhfgkjh');
-  }
+   
+    const result = this.state.objects.map((values )=>{ 
+      return values.valu
+    })
+
+      const matches = result.filter(states =>
+        {  
+          const regex =new RegExp(`^${value}`,'gi');
+          return  states.match(regex);
+          
+        });
+    this.setState({matchesbox:matches,})
+    
+     if(value.length ===0 )
+     {
+      this.setState({searchBox:false})
+     }
+     else{
+       this.setState({searchBox:true})
+     }
+   
+  }  
+    
 
 
   render() {
-    console.log(this.state.inputValue, '"input-value"')
+   console.log(this.state.matchesbox,'matches')
     return (
       <React.Fragment>
         <div className="Navbar-Wrapper">
@@ -49,7 +67,7 @@ export default class App extends Component {
 
         {this.state.searchBox &&
           <div className="search-box-wrapper">
-            <SearchBox searchitems={this.state.objects} />
+            <SearchBox searchitems={this.state.matchesbox} />
           </div>}
 
       </React.Fragment>

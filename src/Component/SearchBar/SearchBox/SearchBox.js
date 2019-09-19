@@ -8,23 +8,25 @@ export default class SearchBox extends Component {
         super(props);
         console.log(this.props, 'props');
     }
-    render() {
-
+    render()
+  
+    {
+           
         return (
             <div className="searchbox">
                 <ul>
-                    {this.props.searchitems.map((gameItem, index) => {
+                    {this.props.searchitems.map((gameItem) => {
                         return (
                             <Link>
-                                <li key={index}>
+                                <li >
                                     <span className="box-img"><img width="100%" src={gameItem.imgUrl} /></span>
-                                    <span className="box-txt">{gameItem.value}</span>
+                                    <span className="box-txt"> {gameItem}</span>
                                 </li>
                             </Link>
                         )
                     })}
                 </ul>
-                {/* {console.log(this.props.searchitems)} */}
+              
             </div>
         )
     }
