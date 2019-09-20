@@ -11,29 +11,24 @@ import ToggleMenu from './ToggleMenu/ToggleMenu';
 
 export default class Navbar extends Component {
     state = {
-        showMenu: false, showSearch: false,
-        box:this.props.box
-       
+        showMenu: false,
+        showSearch: false
     }
-   
-   
+
     searchHandler = () => {
         this.setState({ showSearch: !this.state.showSearch, showMenu: false })
     }
     menuHandler = () => {
-        this.setState({ showMenu: !this.state.showMenu, showSearch: false })
+        this.setState({ showMenu: !this.state.showMenu, showSearch: false });
     }
-    changeFunc = (event) => {
-        console.log(event.target.value,'called')
-        this.props.navBar(event.target.value);
-    }
+
     render() {
         return (
             <div className="container">
                 <ul className="navbar">
                     <li className="logo-wrapper"><Link><img className="logo" src={process.env.PUBLIC_URL + './logo-makepop.png'} alt="logo here" /></Link></li>
                     <li className="explore-wrapper"><Link>Explore</Link></li>
-                    <li className="search-wrapper"><SearchBar change={this.changeFunc} /></li>
+                    <li className="search-wrapper"><SearchBar /></li>
 
                     <li className="items-wrapper"><Navitems /></li>
                     <i class="fa fa-search errspan-sm " onClick={this.searchHandler} aria-hidden="true"></i>
@@ -47,7 +42,7 @@ export default class Navbar extends Component {
                 {
                     this.state.showSearch &&
                     <div className="search-sm-wrapper">
-                        <input className="search-sm" type="search"  onChange={this.changeFunc} placeholder="Search"/>
+                        <SearchBar />
                     </div>
                 }
 

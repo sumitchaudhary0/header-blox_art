@@ -1,29 +1,16 @@
 .errspan {
     margin-left: -18px;
     color: #0000003d;
+    cursor: pointer;
 }
 
 .search {
-    width: 71%;
-   
+    width: 95%;
     border: none;
     padding: 6px 7px;
     outline: none;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    .sr-wrapper {
-        display: none;
-    }
-    
-}
-.serachInputContainer input {
-    
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .sr-wrapper {
-        display: none;
-    }
-    
+.search-box-wrapper {
+    position: relative;
 }

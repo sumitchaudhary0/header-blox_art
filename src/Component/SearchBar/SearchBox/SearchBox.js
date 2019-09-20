@@ -8,10 +8,8 @@ export default class SearchBox extends Component {
         super(props);
         console.log(this.props, 'props');
     }
-    render()
-  
-    {
-           
+    render() {
+
         return (
             <div className="searchbox">
                 <ul>
@@ -26,7 +24,7 @@ export default class SearchBox extends Component {
                         )
                     })}
                 </ul>
-              
+
             </div>
         )
     }

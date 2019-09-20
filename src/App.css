@@ -3,3 +3,8 @@
     background: #0066a2;
     line-height: 30px
   }
+
+  .searchbar {
+    width: 50%;
+    margin: 20px auto;
+  }
